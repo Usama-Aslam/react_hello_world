@@ -900,6 +900,33 @@ class App extends Component {
       </ul>
       </div>
 
+<div>
+      <h2>What is the differece between import something from somewhere VS import &#123;something&#125; from somewhere</h2>
+      <p>Let's say you have a very simple module named 'some-module', in it you have:
+      <br></br><br></br>
+var foo = 'bar';<br></br>
+export default foo;<br></br>
+export function helloWorld () &#123; ... &#125;;<br></br>
+When you do:<br></br>
+<br></br>
+import something from 'some-module';<br></br>
+<br></br>
+you are only importing the default export of 'some-module'. In this case, it is the string foo. The default export can be anything, object, function, etc.
+<br></br><br></br>
+When you do:
+<br></br><br></br>
+import &#123;helloWorld&#125; from 'some-module';
+<br></br><br></br>
+You are specifically importing a member of 'some-module' named 'helloWorld' and not the default export. In this case, it is the function 'helloWorld'.
+<br></br><br></br>
+If you had done:
+<br></br><br></br>
+import &#123;something&#125; from 'some-module';
+<br></br><br></br>
+The 'something' would be 'undefined' since there is no export for with that name.</p>
+      </div>
+
+      
       <div className="card-container">
           <h2>Q3) Just copy and paste the data from these links and store them into a variable:</h2>
           <p>const posts = https://jsonplaceholder.typicode.com/posts //copy the array from this link</p>
@@ -918,7 +945,6 @@ class App extends Component {
           })
         })}
       </div>
-
       </div>
     );
   }
