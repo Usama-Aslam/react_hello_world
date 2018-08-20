@@ -906,7 +906,15 @@ class App extends Component {
           <p>const posts = https://jsonplaceholder.typicode.com/posts //copy the array from this link</p>
         {usersAPI.map(users=>{
           return postAPI.map(posts=>{
-            
+            if(users.id===posts.userId){
+              return <div className="card" key={posts.id}>
+              <h5>Name: {users.name}</h5>
+              <h5>Email: {users.email}</h5>
+              <h3>{posts.title}</h3>
+              <p>{posts.body}</p>
+              <br />
+            </div>
+            }
           })
         })}
       </div>
