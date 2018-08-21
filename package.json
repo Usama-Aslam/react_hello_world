@@ -2,7 +2,7 @@
   "name": "react_hello_world",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://Usama-Aslam.github.io/react_hello_world",
+  "homepage":"https://usama-aslam.github.io/react_hello_world",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "react": "^16.4.2",
